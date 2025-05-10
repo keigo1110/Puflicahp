@@ -14,10 +14,10 @@ interface MainContentProps {
 
 export default function MainContent({ title, videoId, concept, subtitle }: MainContentProps) {
   const [randomizedCreators, setRandomizedCreators] = useState([
-    { name: '岡空来', role: 'パシャパシャ' },
-    { name: '金澤政宜', role: 'プカプカ' },
-    { name: '中田裕紀', role: 'グワグワ' },
-    { name: '南田桂吾', role: 'カタカタ' },
+    { name: '岡空来', role: 'パシャパシャ', website: 'https://example.com/oka' },
+    { name: '金澤政宜', role: 'プカプカ', website: 'https://kanassi.info/' },
+    { name: '中田裕紀', role: 'グワグワ', website: 'https://yuki-nakata.org/' },
+    { name: '南田桂吾', role: 'カタカタ', website: 'https://keigominamida.com/' },
   ])
 
   useEffect(() => {
@@ -148,6 +148,21 @@ export default function MainContent({ title, videoId, concept, subtitle }: MainC
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-bold">Puflica</h2>
           <p className="text-lg md:text-xl">4ZIGEN</p>
+
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <p className="text-md md:text-lg mb-2">本作品は東京大学大学院学際情報学府先端表現情報学コースの入試説明会（2026年度4月入学、夏季入試）のティザー画像として使用されました。</p>
+            <a
+              href="https://www.iii.u-tokyo.ac.jp/event/20250418event2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block relative group"
+            >
+              <span className="text-md md:text-lg font-medium transition-colors duration-300 group-hover:text-gray-600">
+                詳細はこちら
+              </span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
